@@ -9,6 +9,6 @@ set number
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" MiniBufExplorer keyboard setup
-let g:miniBufExplMapWindowNavVim = 1
+" MiniBufExplorer setup
+let g:miniBufExplorerMoreThanOne = 0
 let g:miniBufExplMapCTabSwitchBufs = 1
