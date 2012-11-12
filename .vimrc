@@ -5,11 +5,14 @@ filetype plugin indent on
 syntax on
 set number
 
+" MacOS preferences
+set clipboard=unnamed
+
 " Use pathogen to wrangle runtimepath so everything in bundle/ is included
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 " MiniBufExplorer setup
-let g:miniBufExplorerMoreThanOne = 0
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplorerMoreThanOne=0
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplUseSingleClick=1
