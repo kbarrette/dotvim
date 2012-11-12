@@ -5,6 +5,15 @@ filetype plugin indent on
 syntax on
 set number
 
+" Spacing
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set nowrap
+set autoindent
+set copyindent
+
 " MacOS preferences
 set clipboard=unnamed
 
