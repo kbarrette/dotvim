@@ -12,3 +12,4 @@ call pathogen#infect()
 " MiniBufExplorer setup
 let g:miniBufExplorerMoreThanOne = 0
 let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplUseSingleClick = 1
