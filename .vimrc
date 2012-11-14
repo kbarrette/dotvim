@@ -25,3 +25,6 @@ call pathogen#infect()
 let g:statusLineText=''
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplUseSingleClick=1
+
+" CtrlP setup
+let g:ctrlp_lazy_update=1
