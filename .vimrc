@@ -1,6 +1,5 @@
 " Look and feel
 colorscheme Sunburst
-set guifont=Inconsolata:h15
 filetype plugin indent on
 syntax on
 set number
@@ -29,3 +28,10 @@ let g:miniBufExplForceSyntaxEnable=1
 
 " CtrlP setup
 let g:ctrlp_lazy_update=1
+
+" GUI vs terminal setup
+if has('gui_running')
+  set guifont=Inconsolata:h15
+else
+  set t_Co=256
+endif
