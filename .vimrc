@@ -1,3 +1,5 @@
+set nocompatible
+
 " Look and feel
 colorscheme Sunburst
 filetype plugin indent on
