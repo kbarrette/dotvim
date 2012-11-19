@@ -15,7 +15,7 @@ set nowrap
 set autoindent
 set copyindent
 
-" MacOS preferences
+" Use host OS clipboard
 set clipboard=unnamed
 
 " Use pathogen to wrangle runtimepath so everything in bundle/ is included
@@ -31,9 +31,16 @@ let g:miniBufExplForceSyntaxEnable=1
 " CtrlP setup
 let g:ctrlp_lazy_update=1
 
-" GUI vs terminal setup
+" GUI setup
 if has('gui_running')
-  set guifont=Inconsolata:h15
+  if has("win32") || has("win16")
+    set guifont=Inconsolata:h12
+  else
+    set guifont=Inconsolata:h15
+  endif
+
+" Terminal setup
 else
   set t_Co=256
 endif
+
