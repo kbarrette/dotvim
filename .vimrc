@@ -5,6 +5,7 @@ colorscheme Sunburst
 filetype plugin indent on
 syntax on
 set number
+set showcmd
 
 " Don't warn about unsaved buffers
 set hidden
