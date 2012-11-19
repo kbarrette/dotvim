@@ -42,6 +42,10 @@ if has('gui_running')
     set guifont=Inconsolata:h15
   endif
 
+  " Remove left and right scrollbars
+  set guioptions-=L
+  set guioptions-=r
+
 " Terminal setup
 else
   set t_Co=256
