@@ -6,7 +6,10 @@ filetype plugin indent on
 syntax on
 set number
 
-" Spacing
+" Don't warn about unsaved buffers
+set hidden
+
+" Whitespace
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
