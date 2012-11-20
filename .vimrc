@@ -1,5 +1,14 @@
 set nocompatible
 
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'techlivezheng/vim-plugin-minibufexpl'
+Bundle 'ervandew/supertab'
+
 " Look and feel
 colorscheme Sunburst
 filetype plugin indent on
@@ -21,10 +30,6 @@ set copyindent
 
 " Use host OS clipboard
 set clipboard=unnamed
-
-" Use pathogen to wrangle runtimepath so everything in bundle/ is included
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
 
 " MiniBufExplorer setup
 let g:statusLineText=''
