@@ -15,6 +15,7 @@ filetype plugin indent on
 syntax on
 set number
 set showcmd
+set incsearch
 
 " Don't warn about unsaved buffers
 set hidden
