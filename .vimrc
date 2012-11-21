@@ -25,6 +25,11 @@ set incsearch
 set wildmenu
 set wildmode=list:longest
 
+" Live dangerously - turn off backups
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Don't warn about unsaved buffers
 set hidden
 
