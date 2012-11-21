@@ -14,7 +14,11 @@ colorscheme Sunburst
 filetype plugin indent on
 syntax on
 set number
+
+" Show some info about the current command
 set showcmd
+
+" Search incrementally
 set incsearch
 
 " Don't warn about unsaved buffers
