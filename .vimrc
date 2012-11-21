@@ -25,6 +25,9 @@ set incsearch
 set wildmenu
 set wildmode=list:longest
 
+" Keybindings
+:nmap ; :
+
 " Live dangerously - turn off backups
 set nobackup
 set nowritebackup
