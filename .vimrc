@@ -51,9 +51,6 @@ let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplUseSingleClick=1
 let g:miniBufExplForceSyntaxEnable=1
 
-" CtrlP setup
-let g:ctrlp_lazy_update=1
-
 " GUI setup
 if has('gui_running')
   if has("win32") || has("win16")
