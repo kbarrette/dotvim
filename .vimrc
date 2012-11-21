@@ -21,6 +21,10 @@ set showcmd
 " Search incrementally
 set incsearch
 
+" Use wildmenu
+set wildmenu
+set wildmode=list:longest
+
 " Don't warn about unsaved buffers
 set hidden
 
