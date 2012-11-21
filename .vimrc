@@ -15,6 +15,10 @@ filetype plugin indent on
 syntax on
 set number
 
+" Ignore case in searches unless there are upper-case characters in the search
+set ignorecase
+set smartcase
+
 " Show some info about the current command
 set showcmd
 
