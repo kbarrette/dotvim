@@ -30,6 +30,7 @@ set wildmenu
 set wildmode=list:longest
 
 " Keybindings
+let mapleader=" "
 :nmap ; :
 
 " Live dangerously - turn off backups
