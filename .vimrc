@@ -35,6 +35,9 @@ set wildmode=list:longest
 let mapleader=" "
 :nmap ; :
 
+" Set up tab to switch to last used buffer
+nnoremap <Tab> :b#<CR>
+
 " Live dangerously - turn off backups
 set nobackup
 set nowritebackup
