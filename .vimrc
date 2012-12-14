@@ -8,7 +8,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
 Bundle 'ervandew/supertab'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-rails'
 
 " Look and feel
