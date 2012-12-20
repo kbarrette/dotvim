@@ -58,6 +58,9 @@ set copyindent
 " Use host OS clipboard
 set clipboard=unnamed
 
+" Syntax highlighting for JSON
+autocmd BufRead,BufNewFile *.json set filetype=json
+
 " MiniBufExplorer setup
 let g:statusLineText=''
 let g:miniBufExplMapCTabSwitchBufs=1
