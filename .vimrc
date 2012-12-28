@@ -16,6 +16,7 @@ colorscheme Sunburst
 filetype plugin indent on
 syntax on
 set number
+set ruler
 
 " Ignore case in searches unless there are upper-case characters in the search
 set ignorecase
