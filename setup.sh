@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Pull latest
-echo "Pulling latest dotvim"
-git pull
-
 # Set up Vundle
 if [ ! -d "bundle/vundle" ]; then
   echo "Cloning Vundle"
