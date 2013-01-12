@@ -40,6 +40,10 @@ let mapleader=" "
 " Set up tab to switch to last used buffer
 nnoremap <Tab> :b#<CR>
 
+" Set leader p to paste from register 0 (last yank)
+nnoremap <leader>P "0P
+nnoremap <leader>p "0p
+
 " Live dangerously - turn off backups
 set nobackup
 set nowritebackup
