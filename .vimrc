@@ -10,6 +10,7 @@ Bundle 'techlivezheng/vim-plugin-minibufexpl'
 Bundle 'ervandew/supertab'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
 
 " Look and feel
 colorscheme Sunburst
