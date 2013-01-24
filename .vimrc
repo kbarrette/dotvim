@@ -11,6 +11,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-powerline'
 
 " Look and feel
 colorscheme Sunburst
@@ -18,6 +19,10 @@ filetype plugin indent on
 syntax on
 set number
 set ruler
+set encoding=utf-8
+
+" Always show status line
+set laststatus=2
 
 " Ignore case in searches unless there are upper-case characters in the search
 set ignorecase
@@ -76,12 +81,18 @@ let g:miniBufExplForceSyntaxEnable=1
 " CtrlP setup
 let g:ctrlp_clear_cache_on_exit = 1
 
+" Powerline setup
+set noshowmode
+
 " GUI setup
 if has('gui_running')
   if has("win32") || has("win16")
     set guifont=Inconsolata:h12
   else
-    set guifont=Inconsolata:h15
+    set guifont=Inconsolata\ for\ Powerline:h15
+
+    " Powerline setup
+    let g:Powerline_symbols='fancy'
   endif
 
   " Remove left and right scrollbars
