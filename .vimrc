@@ -4,14 +4,14 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
-Bundle 'ervandew/supertab'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-powerline'
 
 " Look and feel
 colorscheme Sunburst
