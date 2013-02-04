@@ -46,8 +46,12 @@ let mapleader=" "
 nnoremap <Tab> :b#<CR>
 
 " Set leader p to paste from register 0 (last yank)
-nnoremap <leader>P "0P
-nnoremap <leader>p "0p
+nnoremap <leader>P "0P=`]
+nnoremap <leader>p "0p=`]
+
+" Set p to paste and reindent
+nnoremap P P=`]
+nnoremap p p=`]
 
 " Live dangerously - turn off backups
 set nobackup
