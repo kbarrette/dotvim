@@ -70,6 +70,10 @@ set nowrap
 set autoindent
 set copyindent
 
+" Retain window position when switching buffers
+autocmd BufLeave * let b:winview = winsaveview()
+autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
+
 " Use host OS clipboard
 set clipboard=unnamed
 
