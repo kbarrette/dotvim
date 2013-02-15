@@ -8,7 +8,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-Bundle 'techlivezheng/vim-plugin-minibufexpl'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-rails'
@@ -81,14 +80,10 @@ set clipboard=unnamed
 " Syntax highlighting for JSON
 autocmd BufRead,BufNewFile *.json set filetype=json
 
-" MiniBufExplorer setup
-let g:statusLineText=''
-let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplUseSingleClick=1
-let g:miniBufExplForceSyntaxEnable=1
-
 " CtrlP setup
 let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_cmd = 'CtrlPMRU'
+nnoremap <C-L> :CtrlPBuffer<CR>
 
 " Powerline setup
 set noshowmode
