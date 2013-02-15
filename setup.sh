@@ -9,5 +9,10 @@ fi
 echo "Running BundleInstall"
 vim +BundleInstall! +qall 2>/dev/null
 
+echo "Compiling YouCompleteMe"
+pushd ~/.vim/bundle/YouCompleteMe
+./install.sh
+popd
+
 echo "Done."
 
