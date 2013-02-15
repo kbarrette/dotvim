@@ -41,7 +41,7 @@ set wildmode=list:longest
 
 " Keybindings
 let mapleader=" "
-:nmap ; :
+nnoremap ; :
 
 " Set up tab to switch to last used buffer
 nnoremap <Tab> :b#<CR>
