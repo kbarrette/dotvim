@@ -8,13 +8,20 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 
+" Make paren matching more subtle, make Syntastic errors match other errors
+let g:jellybeans_overrides = {
+\  'MatchParen': { 'guifg': 'ffffff', 'ctermfg': '231', 'attr': 'underline,bold' },
+\  'SyntasticError': { 'guibg': '902020', 'ctermbg': 'DarkRed' },
+\}
+
 " Look and feel
-colorscheme Sunburst
+colorscheme jellybeans
 filetype plugin indent on
 syntax on
 set number
