@@ -11,7 +11,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 
 " Make paren matching more subtle, make Syntastic errors match other errors
