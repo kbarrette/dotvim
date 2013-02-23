@@ -91,6 +91,9 @@ nnoremap <C-L> :CtrlPBuffer<CR>
 " Powerline setup
 set noshowmode
 
+" YouCompleteMe setup
+let g:ycm_complete_in_comments_and_strings = 1
+
 " GUI setup
 if has('gui_running')
   if has("win32") || has("win16")
