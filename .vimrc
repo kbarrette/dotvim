@@ -83,9 +83,6 @@ autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
 " Use host OS clipboard
 set clipboard=unnamed
 
-" Syntax highlighting for JSON
-autocmd BufRead,BufNewFile *.json set filetype=json
-
 " CtrlP setup
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
