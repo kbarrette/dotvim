@@ -14,6 +14,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
@@ -123,6 +124,9 @@ set autoindent
 set shiftwidth=2
 set copyindent
 set nowrap
+
+" Use option as meta on a mac
+set macmeta
 
 
 " -------------------------------
