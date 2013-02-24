@@ -144,6 +144,10 @@ nnoremap <leader>p "0p=`]
 nnoremap P P=`]
 nnoremap p p=`]
 
+" Ctrl-S saves
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 " Retain window position when switching buffers
 autocmd BufLeave * let b:winview = winsaveview()
