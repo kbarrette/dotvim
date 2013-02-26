@@ -163,3 +163,9 @@ autocmd FileType ruby vnoremap ar <ESC>?do<CR>v/end/e<CR>
 autocmd FileType ruby vnoremap ir <ESC>?do?e+1<CR>v/\s*end/s-1<CR>
 autocmd FileType ruby omap ar :normal var<CR>
 autocmd FileType ruby omap ir :normal vir<CR>
+
+" Highlight extraneous whitespace
+autocmd BufWinEnter * match Error /\s\+$/
+autocmd InsertEnter * match Error /\s\+\%#\@<!$/
+autocmd InsertLeave * match Error /\s\+$/
+autocmd BufWinLeave * call clearmatches()
