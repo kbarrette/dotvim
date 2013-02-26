@@ -41,10 +41,11 @@ let g:ycm_complete_in_comments_and_strings = 1
 " Colors, display options, etc
 " ----------------------------
 
-" Make paren matching more subtle, make Syntastic errors match other errors
+" Make paren matching more subtle, Syntastic errors match other errors, Todo more prominent
 let g:jellybeans_overrides = {
 \  'MatchParen': { 'guifg': 'ffffff', 'ctermfg': '231', 'attr': 'underline,bold' },
 \  'SyntasticError': { 'guibg': '902020', 'ctermbg': 'DarkRed' },
+\  'Todo': { 'attr': 'reverse,bold' },
 \}
 colorscheme jellybeans
 
