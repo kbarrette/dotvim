@@ -137,6 +137,7 @@ set macmeta
 " Keybindings
 let mapleader=" "
 nnoremap ; :
+nnoremap : ;
 
 " Set up tab to switch to last used buffer
 nnoremap <Tab> :b#<CR>
