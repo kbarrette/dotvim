@@ -170,3 +170,9 @@ autocmd BufWinEnter * match Error /\s\+$/
 autocmd InsertEnter * match Error /\s\+\%#\@<!$/
 autocmd InsertLeave * match Error /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Reformat entire file
+nnoremap <leader>fa ggVG=
+
+" Reformat paragraph
+nnoremap <leader>fp vap=
