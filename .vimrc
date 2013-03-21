@@ -2,6 +2,32 @@
 set nocompatible
 
 
+" ------------------
+" Custom keybindings
+" ------------------
+
+" Keybindings
+let mapleader=" "
+nnoremap ; :
+nnoremap : ;
+
+" Set up tab to switch to last used buffer
+nnoremap <Tab> :b#<CR>
+
+" Set leader p to paste from register 0 (last yank)
+nnoremap <leader>P "0P=`]
+nnoremap <leader>p "0p=`]
+
+" Set p to paste and reindent
+nnoremap P P=`]
+nnoremap p p=`]
+
+" Ctrl-S saves
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
+
 " -----------------
 " Plugin management
 " -----------------
@@ -131,30 +157,9 @@ set nowrap
 set macmeta
 
 
-" -------------------------------
-" Custom keybindings and commands
-" -------------------------------
-
-" Keybindings
-let mapleader=" "
-nnoremap ; :
-nnoremap : ;
-
-" Set up tab to switch to last used buffer
-nnoremap <Tab> :b#<CR>
-
-" Set leader p to paste from register 0 (last yank)
-nnoremap <leader>P "0P=`]
-nnoremap <leader>p "0p=`]
-
-" Set p to paste and reindent
-nnoremap P P=`]
-nnoremap p p=`]
-
-" Ctrl-S saves
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+" ---------------
+" Custom commands
+" ---------------
 
 " Retain window position when switching buffers
 autocmd BufLeave * let b:winview = winsaveview()
