@@ -46,6 +46,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/BufOnly.vim'
 
 
 " -------------------------------
