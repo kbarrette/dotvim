@@ -7,7 +7,7 @@ set nocompatible
 " ------------------
 
 " Keybindings
-let mapleader=" "
+let mapleader=","
 nnoremap ; :
 nnoremap : ;
 
