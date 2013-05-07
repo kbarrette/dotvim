@@ -68,6 +68,9 @@ let g:Powerline_symbols='fancy'
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
 
+" vim-gitgutter
+nnoremap <Leader>gg :GitGutterToggle<CR>
+
 " indentline setup
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 237
