@@ -61,6 +61,7 @@ nnoremap <C-L> :CtrlPBuffer<CR>
 
 " Powerline setup
 set noshowmode
+let g:Powerline_symbols='fancy'
 
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
@@ -110,8 +111,6 @@ if has('gui_running')
   else
     set guifont=Inconsolata\ for\ Powerline:h15
 
-    " Powerline setup
-    let g:Powerline_symbols='fancy'
   endif
 
   " Remove left and right scrollbars
