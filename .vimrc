@@ -56,6 +56,8 @@ Bundle 'Yggdroot/indentLine'
 
 " CtrlP setup
 let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_mruf_relative = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
 nnoremap <C-L> :CtrlPBuffer<CR>
 
