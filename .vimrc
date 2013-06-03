@@ -48,6 +48,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'Yggdroot/indentLine'
+Bundle 'mileszs/ack.vim'
 
 
 " -------------------------------
