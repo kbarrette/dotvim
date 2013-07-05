@@ -50,16 +50,21 @@ Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/scratch.vim'
+Bundle 'kbarrette/ctrlp-burkematcher.vim'
 
 " -------------------------------
 " Plugin customizations and setup
 " -------------------------------
 
+" ctrlp-burkematcher setup
+let g:cpbm_path_to_matcher = "~/bin/matcher"
+
 " CtrlP setup
-let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_mruf_relative = 1
-" let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --exclude-standard']
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_func = { 'match': 'BurkeMatcher' }
 nnoremap <C-L> :CtrlPBuffer<CR>
 
 " Powerline setup
@@ -194,35 +199,4 @@ nnoremap <leader>fa ggVG=
 
 " Reformat paragraph
 nnoremap <leader>fp vap=
-
-" ------------
-" Experimental
-" ------------
-
-" Based on https://github.com/burke/matcher
-function! BurkeMatcher(items, str, limit, mmode, ispath, crfile, regex)
-  let results = []
-
-  " No search string, just return the list we were passed
-  if len(a:str) == 0
-    let results = a:items[0:(a:limit)]
-
-  " We have a search string
-  else
-    let match_cmd = g:path_to_matcher . ' --limit ' . a:limit . ' --no-dotfiles ' . a:str
-    let results = split(system(match_cmd, join(a:items, "\n")), "\n")
-
-  endif
-
-  " Exclude current file from results when a:ispath == 1
-  if a:ispath == 1
-    remove(results, index(results, a:crfile))
-  endif
-
-  return results
-endfunction
-let g:path_to_matcher = "~/bin/matcher"
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --exclude-standard']
-let g:ctrlp_use_caching = 0
-let g:ctrlp_match_func = { 'match': 'BurkeMatcher' }
 
