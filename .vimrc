@@ -49,7 +49,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'mileszs/ack.vim'
-
+Bundle 'vim-scripts/scratch.vim'
 
 " -------------------------------
 " Plugin customizations and setup
