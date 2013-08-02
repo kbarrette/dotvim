@@ -201,3 +201,6 @@ nnoremap <leader>fa ggVG=
 " Reformat paragraph
 nnoremap <leader>fp vap=
 
+" Bufonly
+nnoremap <leader>bo :Bufonly<CR>
+
