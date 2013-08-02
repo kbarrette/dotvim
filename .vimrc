@@ -36,12 +36,11 @@ inoremap <C-S> <C-O>:update<CR>
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-" Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
@@ -56,6 +55,12 @@ Bundle 'kbarrette/ctrlp-burkematcher.vim'
 " Plugin customizations and setup
 " -------------------------------
 
+" vim-airline setup
+set noshowmode
+let g:airline_theme = 'powerlineish'
+let g:airline_enable_syntastic = 1
+let g:airline_powerline_fonts = 1
+
 " ctrlp-burkematcher setup
 let g:cpbm_path_to_matcher = "~/bin/matcher"
 
@@ -66,10 +71,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --
 let g:ctrlp_use_caching = 0
 let g:ctrlp_match_func = { 'match': 'BurkeMatcher' }
 nnoremap <C-L> :CtrlPBuffer<CR>
-
-" Powerline setup
-set noshowmode
-let g:Powerline_symbols='fancy'
 
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
