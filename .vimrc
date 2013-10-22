@@ -48,6 +48,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'kbarrette/ctrlp-burkematcher.vim'
 
