@@ -15,8 +15,8 @@ nnoremap : ;
 nnoremap <Tab> :b#<CR>
 
 " Set leader p to paste from register 0 (last yank)
-nnoremap <leader>P "0P=`]
-nnoremap <leader>p "0p=`]
+" nnoremap <leader>P "0P=`]
+" nnoremap <leader>p "0p=`]
 
 " Set p to paste and reindent
 nnoremap P P=`]
@@ -182,12 +182,6 @@ set macmeta
 " Retain window position when switching buffers
 autocmd BufLeave * let b:winview = winsaveview()
 autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
-
-" Elementary Ruby text objects
-autocmd FileType ruby vnoremap ar <ESC>?do<CR>v/end/e<CR>
-autocmd FileType ruby vnoremap ir <ESC>?do?e+1<CR>v/\s*end/s-1<CR>
-autocmd FileType ruby omap ar :normal var<CR>
-autocmd FileType ruby omap ir :normal vir<CR>
 
 " Highlight extraneous whitespace
 autocmd BufWinEnter * match Error /\s\+$/
