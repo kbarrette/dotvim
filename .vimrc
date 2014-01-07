@@ -38,7 +38,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'airblade/vim-gitgutter'
+Bundle 'mhinz/vim-signify'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
@@ -75,10 +75,6 @@ nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
-
-" vim-gitgutter
-nnoremap <Leader>gg :GitGutterToggle<CR>
-let g:gitgutter_eager = 0
 
 " indentline setup
 let g:indentLine_char = '┆'
