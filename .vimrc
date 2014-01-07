@@ -36,6 +36,7 @@ inoremap <C-S> <C-O>:update<CR>
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'tpope/vim-repeat'
 Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'mhinz/vim-signify'
