@@ -10,6 +10,8 @@ set nocompatible
 let mapleader=","
 nnoremap ; :
 nnoremap : ;
+vnoremap ; :
+vnoremap : ;
 
 " Set up tab to switch to last used buffer
 nnoremap <Tab> :b#<CR>
