@@ -47,7 +47,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
-Bundle 'Yggdroot/indentLine'
 Bundle 'mileszs/ack.vim'
 Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/scratch.vim'
@@ -76,10 +75,6 @@ nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
-
-" indentline setup
-let g:indentLine_char = '┆'
-let g:indentLine_color_term = 237
 
 
 " ----------------------------
