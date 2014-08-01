@@ -29,6 +29,8 @@ noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 
+" Delete buffers
+nnoremap <leader>bd :bd<CR>
 
 " -----------------
 " Plugin management
