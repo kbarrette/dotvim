@@ -107,6 +107,9 @@ set laststatus=2
 " Show some info about the current command
 set showcmd
 
+" Don't continue comments
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " GUI setup
 if has('gui_running')
   if has("win32") || has("win16")
