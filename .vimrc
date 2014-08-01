@@ -46,7 +46,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
-Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'kbarrette/ctrlp-burkematcher.vim'
 
