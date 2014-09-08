@@ -47,7 +47,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/scratch.vim'
-Bundle 'kbarrette/ctrlp-burkematcher.vim'
+Bundle 'FelikZ/ctrlp-py-matcher'
 
 " -------------------------------
 " Plugin customizations and setup
@@ -59,15 +59,14 @@ let g:airline_theme = 'powerlineish'
 let g:airline_enable_syntastic = 1
 let g:airline_powerline_fonts = 1
 
-" ctrlp-burkematcher setup
-let g:cpbm_path_to_matcher = "~/bin/matcher"
-
 " CtrlP setup
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --exclude-standard']
 let g:ctrlp_use_caching = 0
-let g:ctrlp_match_func = { 'match': 'BurkeMatcher' }
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
