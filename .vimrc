@@ -41,6 +41,8 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'mhinz/vim-signify'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'kana/vim-operator-replace'
+Bundle 'kana/vim-operator-user'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
@@ -72,6 +74,8 @@ nnoremap <C-L> :CtrlPBuffer<CR>
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
 
+" vim-operator-replace setup
+map gr <Plug>(operator-replace)
 
 " ----------------------------
 " Colors, display options, etc
