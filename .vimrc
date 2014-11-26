@@ -7,7 +7,7 @@ set nocompatible
 " ------------------
 
 " Keybindings
-let mapleader=","
+let mapleader=" "
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
@@ -26,6 +26,13 @@ inoremap <C-S> <C-O>:update<CR>
 
 " Delete buffers
 nnoremap <leader>bd :bd<CR>
+
+" Navigate splits with leader
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
+
 
 " -----------------
 " Plugin management
