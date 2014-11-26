@@ -75,7 +75,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --
 " let g:ctrlp_use_caching = 0
 " let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+if !has('nvim')
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+end
 nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
@@ -145,6 +147,9 @@ endif
 
 " Use host OS clipboard
 set clipboard=unnamed
+if has('nvim')
+  set unnamedclip
+endif
 
 " Ignore case in searches unless there are upper-case characters in the search
 set ignorecase
@@ -173,9 +178,6 @@ set autoindent
 set shiftwidth=2
 set copyindent
 set nowrap
-
-" Use option as meta on a mac
-set macmeta
 
 
 " ---------------
