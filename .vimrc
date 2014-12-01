@@ -75,9 +75,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --
 " let g:ctrlp_use_caching = 0
 " let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
-if !has('nvim')
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-end
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
