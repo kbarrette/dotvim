@@ -145,9 +145,6 @@ endif
 
 " Use host OS clipboard
 set clipboard=unnamed
-if has('nvim')
-  set unnamedclip
-endif
 
 " Ignore case in searches unless there are upper-case characters in the search
 set ignorecase
