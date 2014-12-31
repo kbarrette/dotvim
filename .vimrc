@@ -117,6 +117,9 @@ set laststatus=2
 " Show some info about the current command
 set showcmd
 
+" Speed up big files
+set synmaxcol=1024
+
 " Don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
