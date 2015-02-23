@@ -66,7 +66,7 @@ Bundle 'FelikZ/ctrlp-py-matcher'
 " vim-airline setup
 set noshowmode
 let g:airline_theme = 'powerlineish'
-let g:airline_enable_syntastic = 1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " CtrlP setup
