@@ -1,6 +1,7 @@
 " Be iMproved!
 set nocompatible
 
+set shell=/bin/sh
 
 " ------------------
 " Custom keybindings
