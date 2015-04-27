@@ -40,7 +40,7 @@ call vundle#rc()
 Bundle 'tpope/vim-repeat'
 Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'mhinz/vim-signify'
+Bundle 'kbarrette/gutterballet'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kana/vim-operator-replace'
