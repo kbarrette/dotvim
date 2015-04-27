@@ -50,7 +50,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
-Bundle 'vim-scripts/scratch.vim'
+Bundle 'mtth/scratch.vim'
 Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'Lokaltog/vim-easymotion'
 
@@ -79,6 +79,13 @@ let g:ycm_complete_in_comments_and_strings = 1
 
 " vim-operator-replace setup
 map gr <Plug>(operator-replace)
+
+" scratch setup
+let g:scratch_filetype = 'markdown'
+let g:scratch_autohide = 0
+let g:scratch_insert_autohide = 0
+let g:scratch_horizontal = 0
+let g:scratch_height = 80
 
 " Easymotion setup
 map <Leader>s <Plug>(easymotion-s)
@@ -124,6 +131,9 @@ set synmaxcol=1024
 
 " Don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Fenced markdown languages
+let g:markdown_fenced_languages = ['erb=eruby', 'javascript', 'json=javascript', 'ruby', 'html']
 
 " GUI setup
 if has('gui_running')
