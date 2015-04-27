@@ -28,12 +28,6 @@ inoremap <C-S> <C-O>:update<CR>
 " Delete buffers
 nnoremap <leader>bd :bd<CR>
 
-" Navigate splits with leader
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
-
 
 " -----------------
 " Plugin management
@@ -58,6 +52,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'FelikZ/ctrlp-py-matcher'
+Bundle 'Lokaltog/vim-easymotion'
 
 " -------------------------------
 " Plugin customizations and setup
@@ -85,6 +80,12 @@ let g:ycm_complete_in_comments_and_strings = 1
 " vim-operator-replace setup
 map gr <Plug>(operator-replace)
 
+" Easymotion setup
+map <Leader>s <Plug>(easymotion-s)
+map <Leader>w <Plug>(easymotion-bd-w)
+map <Leader>e <Plug>(easymotion-bd-e)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 " ----------------------------
 " Colors, display options, etc
 " ----------------------------
