@@ -60,7 +60,6 @@ Bundle 'Lokaltog/vim-easymotion'
 
 " vim-airline setup
 set noshowmode
-let g:airline_theme = 'powerlineish'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 
