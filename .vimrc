@@ -53,6 +53,7 @@ Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'mtth/scratch.vim'
 Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-rsi'
 
 " -------------------------------
 " Plugin customizations and setup
