@@ -110,10 +110,10 @@ filetype plugin indent on
 syntax on
 
 " Show line number
-" set number
-set relativenumber
-autocmd InsertEnter * :set number | set norelativenumber
-autocmd InsertLeave * :set relativenumber | set nonumber
+set number
+" set relativenumber
+" autocmd InsertEnter * :set number | set norelativenumber
+" autocmd InsertLeave * :set relativenumber | set nonumber
 
 " Highlight cursor line
 set cursorline
