@@ -54,6 +54,7 @@ Bundle 'mtth/scratch.vim'
 Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rsi'
+runtime macros/matchit.vim
 
 " -------------------------------
 " Plugin customizations and setup
@@ -216,4 +217,44 @@ nnoremap <leader>fp vap=
 
 " Bufonly
 nnoremap <leader>bo :Bufonly<CR>
+
+
+" -----------
+" Experiments
+" -----------
+
+set splitbelow
+set splitright
+set nohlsearch
+nnoremap <silent> <C-J> :wincmd w<CR>
+nnoremap <silent> <C-K> :wincmd W<CR>
+
+set tags=tags,.tags
+
+" Terminal setup
+if has('nvim')
+  function! TermSplit()
+    vsp term://bash
+    file Terminal
+    startinsert!
+  endfunction
+  command! -register TermSplit call TermSplit()
+
+  function! s:moveToWindow(direction)
+    stopinsert
+    execute "wincmd" a:direction
+
+    if &buftype == 'terminal'
+      startinsert!
+    endif
+  endfunc
+
+  highlight TermCursor ctermfg=red guifg=red
+  nnoremap <silent> <C-J> :call <SID>moveToWindow("w")<CR>
+  nnoremap <silent> <C-K> :call <SID>moveToWindow("W")<CR>
+
+  tnoremap <silent> <C-J> <C-\><C-n>:call <SID>moveToWindow("w")<CR>
+  tnoremap <silent> <C-K> <C-\><C-n>:call <SID>moveToWindow("W")<CR>
+  tnoremap <silent> <Leader><ESC> <C-\><C-n>
+endif
 
