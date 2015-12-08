@@ -231,6 +231,8 @@ nnoremap <silent> <C-K> :wincmd W<CR>
 
 set tags=tags,.tags
 
+nnoremap <silent> <C-N> :set relativenumber<CR>:sleep 500m <bar> set norelativenumber<CR>
+
 " Terminal setup
 if has('nvim')
   function! TermSplit()
