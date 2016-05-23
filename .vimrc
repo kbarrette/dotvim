@@ -60,6 +60,16 @@ runtime macros/matchit.vim
 " Plugin customizations and setup
 " -------------------------------
 
+" vim-gitgutter setup
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+let g:gitgutter_sign_column_always = 1
+highlight link GitGutterAdd DiffAdd
+highlight link GitGutterChange DiffChange
+highlight link GitGutterDelete DiffDelete
+highlight link GitGutterChangeDelete DiffChange
+
 " vim-airline setup
 set noshowmode
 let g:airline#extensions#syntastic#enabled = 1
