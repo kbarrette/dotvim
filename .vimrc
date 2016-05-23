@@ -33,28 +33,28 @@ nnoremap <leader>bd :bd<CR>
 " Plugin management
 " -----------------
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'tpope/vim-repeat'
-Bundle 'bling/vim-airline'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'kbarrette/gutterballet'
-Bundle 'gmarik/vundle'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'kana/vim-operator-replace'
-Bundle 'kana/vim-operator-user'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/BufOnly.vim'
-Bundle 'mtth/scratch.vim'
-Bundle 'FelikZ/ctrlp-py-matcher'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rsi'
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-repeat'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'airblade/vim-gitgutter'
+Plug 'gmarik/vundle'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'kana/vim-operator-replace' | Plug 'kana/vim-operator-user'
+Plug 'nanotech/jellybeans.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/BufOnly.vim'
+Plug 'mtth/scratch.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-rsi'
+call plug#end()
 runtime macros/matchit.vim
+
 
 " -------------------------------
 " Plugin customizations and setup
@@ -98,6 +98,9 @@ let g:scratch_height = 80
 
 " Easymotion setup
 map <Leader>s <Plug>(easymotion-s)
+map <Leader>S <Plug>(easymotion-S)
+map <Leader>f <Plug>(easymotion-f)
+map <Leader>F <Plug>(easymotion-F)
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>e <Plug>(easymotion-bd-e)
 map <Leader>j <Plug>(easymotion-j)
