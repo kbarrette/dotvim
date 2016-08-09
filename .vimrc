@@ -40,7 +40,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
-Plug 'gmarik/vundle'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'kana/vim-operator-replace' | Plug 'kana/vim-operator-user'
 Plug 'nanotech/jellybeans.vim'
