@@ -80,6 +80,7 @@ let g:ctrlp_mruf_relative = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --exclude-standard']
 let g:ctrlp_max_files = 0
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+let g:ctrlp_match_current_file = 1
 nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
