@@ -51,6 +51,9 @@ Plug 'mtth/scratch.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-rsi'
+" Plug 'Shougo/vimshell' | Plug 'Shougo/vimproc', { 'do': 'make' }
+Plug 'elmcast/elm-vim'
+Plug 'dag/vim-fish'
 call plug#end()
 runtime macros/matchit.vim
 
@@ -150,8 +153,14 @@ set synmaxcol=1024
 " Don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Show $ at end of change
+" set cpoptions+=$
+
 " Fenced markdown languages
 let g:markdown_fenced_languages = ['erb=eruby', 'javascript', 'json=javascript', 'ruby', 'html']
+
+" 4-space Java indent
+au FileType java setlocal shiftwidth=4 tabstop=4
 
 " GUI setup
 if has('gui_running')
@@ -236,6 +245,8 @@ nnoremap <leader>bo :Bufonly<CR>
 " Experiments
 " -----------
 
+set breakindent
+set colorcolumn=80
 set splitbelow
 set splitright
 set nohlsearch
@@ -248,28 +259,29 @@ nnoremap <silent> <C-N> :set relativenumber<CR>:sleep 500m <bar> set norelativen
 
 " Terminal setup
 if has('nvim')
-  function! TermSplit()
-    vsp term://bash
-    file Terminal
-    startinsert!
-  endfunction
-  command! -register TermSplit call TermSplit()
+  " function! TermSplit()
+  "   vsp term://bash
+  "   file Terminal
+  "   startinsert!
+  " endfunction
+  " command! -register TermSplit call TermSplit()
 
-  function! s:moveToWindow(direction)
-    stopinsert
-    execute "wincmd" a:direction
+  " function! s:moveToWindow(direction)
+  "   stopinsert
+  "   execute "wincmd" a:direction
+  "
+  "   if &buftype == 'terminal'
+  "     startinsert!
+  "   endif
+  " endfunc
 
-    if &buftype == 'terminal'
-      startinsert!
-    endif
-  endfunc
+  " highlight TermCursor ctermfg=red guifg=red
+  " nnoremap <silent> <C-J> :call <SID>moveToWindow("w")<CR>
+  " nnoremap <silent> <C-K> :call <SID>moveToWindow("W")<CR>
 
-  highlight TermCursor ctermfg=red guifg=red
-  nnoremap <silent> <C-J> :call <SID>moveToWindow("w")<CR>
-  nnoremap <silent> <C-K> :call <SID>moveToWindow("W")<CR>
-
-  tnoremap <silent> <C-J> <C-\><C-n>:call <SID>moveToWindow("w")<CR>
-  tnoremap <silent> <C-K> <C-\><C-n>:call <SID>moveToWindow("W")<CR>
+  " tnoremap <silent> <C-J> <C-\><C-n>:call <SID>moveToWindow("w")<CR>
+  " tnoremap <silent> <C-K> <C-\><C-n>:call <SID>moveToWindow("W")<CR>
   tnoremap <silent> <Leader><ESC> <C-\><C-n>
+  tnoremap <silent> <Esc> <C-\><C-n>
 endif
 
