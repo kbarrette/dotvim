@@ -20,7 +20,7 @@ nnoremap <Tab> :b#<CR>
 " Select pasted text
 nnoremap gp `[v`]
 
-" Ctrl-S saves
+" Ctrl-S saves TODO make cmd-S
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
@@ -35,25 +35,24 @@ nnoremap <leader>bd :bd<CR>
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-repeat'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'Lokaltog/vim-easymotion'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jreybert/vimagit'
 Plug 'kana/vim-operator-replace' | Plug 'kana/vim-operator-user'
-Plug 'nanotech/jellybeans.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-surround'
-Plug 'vim-scripts/BufOnly.vim'
+Plug 'mileszs/ack.vim'
 Plug 'mtth/scratch.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
-" Plug 'Shougo/vimshell' | Plug 'Shougo/vimproc', { 'do': 'make' }
-Plug 'elmcast/elm-vim'
-Plug 'dag/vim-fish'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/BufOnly.vim'
+Plug 'w0rp/ale'
 call plug#end()
 runtime macros/matchit.vim
 
@@ -61,12 +60,15 @@ runtime macros/matchit.vim
 " -------------------------------
 " Plugin customizations and setup
 " -------------------------------
+let g:ackprg = 'ag --vimgrep -W80'
+let g:ack_autoclose = 1
+
 
 " vim-gitgutter setup
+set signcolumn=yes
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-let g:gitgutter_sign_column_always = 1
 highlight link GitGutterAdd DiffAdd
 highlight link GitGutterChange DiffChange
 highlight link GitGutterDelete DiffDelete
@@ -74,7 +76,7 @@ highlight link GitGutterChangeDelete DiffChange
 
 " vim-airline setup
 set noshowmode
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " CtrlP setup
@@ -108,6 +110,8 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>e <Plug>(easymotion-bd-e)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+
 " ----------------------------
 " Colors, display options, etc
 " ----------------------------
