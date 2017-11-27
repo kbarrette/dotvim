@@ -256,6 +256,10 @@ set tags=.tags
 set path=.
 
 nnoremap <silent> <C-N> :set relativenumber<CR>:sleep 500m <bar> set norelativenumber<CR>
+augroup HiglightTODO
+  autocmd!
+  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO', -1)
+augroup END
 
 " Terminal setup
 if has('nvim')
