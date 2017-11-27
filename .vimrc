@@ -20,10 +20,11 @@ nnoremap <Tab> :b#<CR>
 " Select pasted text
 nnoremap gp `[v`]
 
-" Ctrl-S saves TODO make cmd-S
+" Ctrl-S saves
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
+nnoremap <leader>r :update<CR>
 
 " Delete buffers
 nnoremap <leader>bd :bd<CR>
@@ -35,12 +36,12 @@ nnoremap <leader>bd :bd<CR>
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jreybert/vimagit'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-operator-replace' | Plug 'kana/vim-operator-user'
 Plug 'mileszs/ack.vim'
 Plug 'mtth/scratch.vim'
@@ -63,7 +64,6 @@ runtime macros/matchit.vim
 let g:ackprg = 'ag --vimgrep -W80'
 let g:ack_autoclose = 1
 
-
 " vim-gitgutter setup
 set signcolumn=yes
 let g:gitgutter_override_sign_column_highlight = 0
@@ -78,15 +78,6 @@ highlight link GitGutterChangeDelete DiffChange
 set noshowmode
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
-
-" CtrlP setup
-let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_mruf_relative = 1
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --other --exclude-standard']
-let g:ctrlp_max_files = 0
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:ctrlp_match_current_file = 1
-nnoremap <C-L> :CtrlPBuffer<CR>
 
 " YouCompleteMe setup
 let g:ycm_complete_in_comments_and_strings = 1
@@ -110,6 +101,10 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>e <Plug>(easymotion-bd-e)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" FZF setup
+nnoremap <C-P> :FZF<CR>
+nnoremap <C-L> :Buffers<CR>
 
 
 " ----------------------------
@@ -257,7 +252,8 @@ set nohlsearch
 nnoremap <silent> <C-J> :wincmd w<CR>
 nnoremap <silent> <C-K> :wincmd W<CR>
 
-set tags=tags,.tags
+set tags=.tags
+set path=.
 
 nnoremap <silent> <C-N> :set relativenumber<CR>:sleep 500m <bar> set norelativenumber<CR>
 
