@@ -39,7 +39,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
-Plug 'jreybert/vimagit'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-operator-replace' | Plug 'kana/vim-operator-user'
@@ -105,6 +104,9 @@ map <Leader>k <Plug>(easymotion-k)
 " FZF setup
 nnoremap <C-P> :FZF<CR>
 nnoremap <C-L> :Buffers<CR>
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+command -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview('right:50%'))
 
 
 " ----------------------------
@@ -213,7 +215,6 @@ set expandtab
 set autoindent
 set shiftwidth=2
 set copyindent
-set nowrap
 
 
 " ---------------
@@ -261,31 +262,7 @@ augroup HiglightTODO
   autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO', -1)
 augroup END
 
-" Terminal setup
-if has('nvim')
-  " function! TermSplit()
-  "   vsp term://bash
-  "   file Terminal
-  "   startinsert!
-  " endfunction
-  " command! -register TermSplit call TermSplit()
-
-  " function! s:moveToWindow(direction)
-  "   stopinsert
-  "   execute "wincmd" a:direction
-  "
-  "   if &buftype == 'terminal'
-  "     startinsert!
-  "   endif
-  " endfunc
-
-  " highlight TermCursor ctermfg=red guifg=red
-  " nnoremap <silent> <C-J> :call <SID>moveToWindow("w")<CR>
-  " nnoremap <silent> <C-K> :call <SID>moveToWindow("W")<CR>
-
-  " tnoremap <silent> <C-J> <C-\><C-n>:call <SID>moveToWindow("w")<CR>
-  " tnoremap <silent> <C-K> <C-\><C-n>:call <SID>moveToWindow("W")<CR>
-  tnoremap <silent> <Leader><ESC> <C-\><C-n>
-  tnoremap <silent> <Esc> <C-\><C-n>
+if !empty(matchstr(system('rbenv local'), 'jruby'))
+  let g:ale_ruby_ruby_executable = '/usr/bin/ruby' " Use system ruby if in jruby (jruby startup is slow)
+  let g:ale_ruby_rubocop_executable = 'system_rubocop'
 endif
-
