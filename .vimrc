@@ -24,7 +24,6 @@ nnoremap gp `[v`]
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
-nnoremap <leader>r :update<CR>
 
 " Delete buffers
 nnoremap <leader>bd :bd<CR>
@@ -255,6 +254,8 @@ nnoremap <silent> <C-K> :wincmd W<CR>
 
 set tags=.tags
 set path=.
+
+nnoremap <leader>rd :redraw!<CR>
 
 nnoremap <silent> <C-N> :set relativenumber<CR>:sleep 500m <bar> set norelativenumber<CR>
 augroup HiglightTODO
