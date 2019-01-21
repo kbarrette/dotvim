@@ -243,6 +243,9 @@ nnoremap <leader>bo :Bufonly<CR>
 " -----------
 " Experiments
 " -----------
+if has("termguicolors")
+ set termguicolors
+endif
 
 set breakindent
 set colorcolumn=80
